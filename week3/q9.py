@@ -2,7 +2,6 @@ class Node:
     def __init__(self, val):
         self.data = val
         self.next = None
-
 class Solution:
     def addTwoLists(self, first, second):
         def reverse(head):
@@ -32,6 +31,4 @@ class Solution:
             carry = sum_val // 10
             temp.next = Node(sum_val % 10)
             temp = temp.next
-
-        # Step 3: Reverse the result to get the correct order
         return reverse(dummy.next)
